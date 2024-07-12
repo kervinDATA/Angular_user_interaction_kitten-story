@@ -1,0 +1,33 @@
+<form [formGroup]="kittenForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name</label>
+    <input id="name" formControlName="name">
+    <div *ngIf="kittenForm.get('name')?.invalid && kittenForm.get('name')?.touched">
+      Name is required.
+    </div>
+  </div>
+  <div>
+    <label for="breed">Breed</label>
+    <input id="breed" formControlName="breed">
+    <div *ngIf="kittenForm.get('breed')?.invalid && kittenForm.get('breed')?.touched">
+      Breed is required.
+    </div>
+  </div>
+  <div>
+    <label for="birthDate">Birth Date</label>
+    <input id="birthDate" formControlName="birthDate" type="date">
+    <div *ngIf="kittenForm.get('birthDate')?.invalid && kittenForm.get('birthDate')?.touched">
+      Birth Date is required.
+    </div>
+  </div>
+  <div>
+    <label for="imageUrl">Image URL</label>
+    <input id="imageUrl" formControlName="imageUrl">
+    <div *ngIf="kittenForm.get('imageUrl')?.invalid && kittenForm.get('imageUrl')?.touched">
+      Image URL is required.
+    </div>
+  </div>
+  <button type="submit" [disabled]="kittenForm.invalid" [ngClass]="{'valid-form': !kittenForm.invalid, 'invalid-form': kittenForm.invalid}">
+    Add Kitten
+  </button>
+</form>

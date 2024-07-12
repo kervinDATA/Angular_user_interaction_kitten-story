@@ -1,0 +1,43 @@
+/* Style pour les images de chatons */
+.kitten-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  /* Style pour les informations des chatons */
+  .kitten-info {
+    display: none;
+    position: absolute;
+    top: 150%; /* Adjust to place above the image */
+    left: 150%;
+    transform: translateX(-50%);
+    width: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: left;
+    z-index: 1;
+  }
+  
+  /* Afficher les informations lors du survol */
+  .kitten-container:hover .kitten-info {
+    display: block;
+  }
+  
+  /* Style pour les boutons */
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

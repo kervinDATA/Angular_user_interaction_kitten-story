@@ -1,0 +1,12 @@
+<div *ngFor="let kitten of adoptedKittens" class="kitten-container">
+  <div>
+    <img [src]="kitten.imageUrl" alt="{{ kitten.name }}" style="width: 100px; height: auto;">
+  </div>
+  <div class="kitten-info">
+    <p><strong>Name:</strong> {{ kitten.name }}</p>
+    <p><strong>Breed:</strong> {{ kitten.breed }}</p>
+    <p><strong>Birth Date:</strong> {{ kitten.birthDate }}</p>
+  </div>
+</div>
+
+
